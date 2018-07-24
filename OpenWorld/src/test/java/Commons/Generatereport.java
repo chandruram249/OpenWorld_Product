@@ -15,7 +15,7 @@ public class Generatereport {
 	public Generatereport(String reportname,String Scriptname) throws IOException
 	{
 		htmlReporter = new ExtentHtmlReporter("./"+reportname+".html");
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./reportname.html");
+		//ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./reportname.html");
 		extent = new ExtentReports();
 		//ExtentReports extent1 = new ExtentReports();
         extent.attachReporter(htmlReporter);
