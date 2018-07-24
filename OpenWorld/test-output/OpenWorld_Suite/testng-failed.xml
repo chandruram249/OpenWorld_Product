@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OpenWorld_Suite]">
+  <parameter name="reportname" value="TestReport"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="scriptname" value="LoginPage"/>
+  <test name="OpenWorld_Test(failed)">
+    <parameter name="reportname" value="TestReport"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="scriptname" value="LoginPage"/>
+    <classes>
+      <class name="TestReport.Login_Test">
+        <methods>
+          <include name="Test3"/>
+          <include name="Test1"/>
+          <include name="afterTest"/>
+          <include name="Test2"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- TestReport.Login_Test -->
+    </classes>
+  </test> <!-- OpenWorld_Test(failed) -->
+</suite> <!-- Failed suite [OpenWorld_Suite] -->

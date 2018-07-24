@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OpenWorld_Suite">
+<test name="OpenWorld_Test">
+<parameter name="browser" value="chrome"/>
+<parameter name="reportname" value="TestReport"/>
+<classes>
+<parameter name="scriptname" value="LoginPage"/>
+<class name="TestReport.Login_Test"/>
+</classes>
+</test>
+</suite>
