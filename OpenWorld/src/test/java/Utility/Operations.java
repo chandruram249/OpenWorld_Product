@@ -59,4 +59,8 @@ public class Operations {
 		
 		return size;
 	}
+	public String message(String msg)
+	{
+		return msg;
+	}
 }

@@ -30,13 +30,12 @@ public class Login {
 	public ExtentReports extent;
 	public ExtentTest log;
 	SoftAssert softassert=new SoftAssert();
-	public Login(WebDriver initdriver,ExtentReports extents,ExtentTest logs) throws IOException
+	public Login(WebDriver initdriver,WebDriverWait waits,ExtentReports extents,ExtentTest logs) throws IOException
 	{
 		this.driver=initdriver;
 		this.extent=extents;
 		this.log=logs;
-		this.wait=new WebDriverWait(initdriver, 10);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		this.wait=waits;
 	}
 	public void validLogin(String username, String password, String firstname)
 	{
@@ -44,7 +43,7 @@ public class Login {
 		new Operations(driver).sendKeys("xpath", "//input[@type='password']", password);
 		new Operations(driver).clickElement("xpath", "//button[@type='submit']");
 		failedstatus= "Not a Home Page";
-		Assert.assertEquals(driver.getCurrentUrl(), "http://192.168.2.17:5000/#",failedstatus );
+		Assert.assertEquals(driver.getCurrentUrl(), "http://192.168.2.17:5000/#/",failedstatus );
 		//System.out.println("Logged in Successfully");
 		log.pass("Logged in Successfully");
 		failedstatus= "Not Logged in to valid user";
@@ -78,7 +77,7 @@ public class Login {
 		log.pass("Showing Proper alert message: "+alert);
 		new Operations(driver).clickElement("xpath", "//button[text()='OK']");
 		//System.out.println("Click Ok");
-		log.pass("Click Ok");
+		log.pass("Clicked Ok");
 		softassert.assertAll();
 		}catch(NoSuchElementException e)
 		{
