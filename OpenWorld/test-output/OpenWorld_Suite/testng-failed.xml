@@ -12,10 +12,11 @@
       <class name="TestReport.Login_Test">
         <methods>
           <include name="beforeMethod"/>
-          <include name="Test3"/>
           <include name="Test1"/>
           <include name="afterTest"/>
-          <include name="Test2"/>
+          <include name="Test7"/>
+          <include name="Test8"/>
+          <include name="Test6"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>

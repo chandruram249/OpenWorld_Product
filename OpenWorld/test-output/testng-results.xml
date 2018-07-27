@@ -1,63 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="1" total="3" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="OpenWorld_Suite" duration-ms="13480" started-at="2018-07-27T09:12:39Z" finished-at="2018-07-27T09:12:53Z">
+  <suite name="Default suite" duration-ms="42" started-at="2018-07-27T13:45:19Z" finished-at="2018-07-27T13:45:19Z">
     <groups>
     </groups>
-    <test name="OpenWorld_Test" duration-ms="13480" started-at="2018-07-27T09:12:39Z" finished-at="2018-07-27T09:12:53Z">
-      <class name="TestReport.Login_Test">
-        <test-method status="PASS" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="beforeTest" is-config="true" duration-ms="190" started-at="2018-07-27T14:42:39Z" finished-at="2018-07-27T14:42:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TestReport]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[LoginPage]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="beforeMethod" is-config="true" duration-ms="1931" started-at="2018-07-27T14:42:39Z" finished-at="2018-07-27T14:42:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="Test1()[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="Test1" duration-ms="10046" started-at="2018-07-27T14:42:41Z" finished-at="2018-07-27T14:42:51Z">
-          <exception class="java.lang.AssertionError">
+    <test name="Default test" duration-ms="42" started-at="2018-07-27T13:45:19Z" finished-at="2018-07-27T13:45:19Z">
+      <class name="TestReport.Forgot_Password_Test">
+        <test-method status="FAIL" signature="beforeTest(java.lang.String)[pri:0, instance:TestReport.Forgot_Password_Test@5e5792a0]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-07-27T19:15:19Z" finished-at="2018-07-27T19:15:19Z">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Login page not opened expected [1] but found [0]]]>
+              <![CDATA[
+Parameter 'reportname' is required by @Configuration on method beforeTest but has not been marked @Optional or defined
+in /tmp/testng-eclipse--1861494227/testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login page not opened expected [1] but found [0]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:370)
-	at TestReport.Login_Test.Test1(Login_Test.java:124)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'reportname' is required by @Configuration on method beforeTest but has not been marked @Optional or defined
+in /tmp/testng-eclipse--1861494227/testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:355)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -72,34 +39,19 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="beforeMethod(java.lang.String)[pri:0, instance:TestReport.Forgot_Password_Test@5e5792a0]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-07-27T19:15:19Z" finished-at="2018-07-27T19:15:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="Test1()[pri:0, instance:TestReport.Forgot_Password_Test@5e5792a0]" name="Test1" duration-ms="6" started-at="2018-07-27T19:15:19Z" finished-at="2018-07-27T19:15:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test1 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="afterMethod" is-config="true" duration-ms="825" started-at="2018-07-27T14:42:51Z" finished-at="2018-07-27T14:42:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Test1 status=FAILURE method=Login_Test.Test1()[pri:0, instance:TestReport.Login_Test@ae45eb6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="Test2()[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="Test2" duration-ms="1" started-at="2018-07-27T14:42:52Z" depends-on-methods="TestReport.Login_Test.Test1" finished-at="2018-07-27T14:42:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test2 -->
-        <test-method status="SKIP" signature="Test3()[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="Test3" duration-ms="2" started-at="2018-07-27T14:42:52Z" depends-on-methods="TestReport.Login_Test.Test1" finished-at="2018-07-27T14:42:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test3 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestReport.Login_Test@ae45eb6]" name="afterTest" is-config="true" duration-ms="452" started-at="2018-07-27T14:42:52Z" finished-at="2018-07-27T14:42:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- TestReport.Login_Test -->
-    </test> <!-- OpenWorld_Test -->
-  </suite> <!-- OpenWorld_Suite -->
+      </class> <!-- TestReport.Forgot_Password_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

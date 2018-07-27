@@ -1,14 +1,15 @@
 package Utility;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Operations {
 	private WebDriver driver;
 	private WebDriverWait wait;
+	Boolean bool;
 	public Operations(WebDriver initdriver)
 	{
 		this.driver=initdriver;
@@ -58,6 +59,21 @@ public class Operations {
 //			text= Driver.instance.findElement(By.linkText(element)).getText();
 		
 		return size;
+	}
+	public Boolean visibleElement(String locator,String element)
+	{
+		bool = false;
+		try {
+			if(locator.equalsIgnoreCase("xpath"))
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
+			if(locator.equalsIgnoreCase("id"))
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(element)));
+			bool = true;
+		} catch (TimeoutException e) {
+
+			bool = false;
+		}
+		return bool;
 	}
 	/*public static String message(String msg)
 	{
