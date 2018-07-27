@@ -59,8 +59,8 @@ public class Operations {
 		
 		return size;
 	}
-	public String message(String msg)
+	/*public static String message(String msg)
 	{
 		return msg;
-	}
+	}*/
 }

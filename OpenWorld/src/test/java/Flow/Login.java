@@ -25,7 +25,7 @@ public class Login {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Boolean bool;
-	public static String failedstatus;
+	//public static String failedstatus;
 	//public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest log;
@@ -42,12 +42,12 @@ public class Login {
 		new Operations(driver).sendKeys("xpath", "//input[@type='text']", username);
 		new Operations(driver).sendKeys("xpath", "//input[@type='password']", password);
 		new Operations(driver).clickElement("xpath", "//button[@type='submit']");
-		failedstatus= "Not a Home Page";
-		Assert.assertEquals(driver.getCurrentUrl(), "http://192.168.2.17:5000/#/",failedstatus );
+		Message.failedstatus= "Not a Home Page";
+		Assert.assertEquals(driver.getCurrentUrl(), "http://192.168.2.17:5000/#",Message.failedstatus );
 		//System.out.println("Logged in Successfully");
 		log.pass("Logged in Successfully");
-		failedstatus= "Not Logged in to valid user";
-		Assert.assertEquals(new Operations(driver).getText("xpath","//i[@class='fa fa-user']/following-sibling::span"),firstname, failedstatus);
+		Message.failedstatus= "Not Logged in to valid user";
+		Assert.assertEquals(new Operations(driver).getText("xpath","//i[@class='fa fa-user']/following-sibling::span"),firstname, Message.failedstatus);
 		//System.out.println("Logged in to valid user");
 		log.pass("Logged in to valid user");
 	}

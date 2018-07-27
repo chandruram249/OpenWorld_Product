@@ -11,6 +11,7 @@
     <classes>
       <class name="TestReport.Login_Test">
         <methods>
+          <include name="beforeMethod"/>
           <include name="Test3"/>
           <include name="Test1"/>
           <include name="afterTest"/>

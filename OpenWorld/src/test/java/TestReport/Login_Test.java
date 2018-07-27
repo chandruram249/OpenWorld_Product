@@ -28,6 +28,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import Commons.Message;
 import Commons.Screenshot;
 import Utility.Operations;
 import Utility.ConfigFile;
@@ -119,7 +120,8 @@ public class Login_Test {
 	public void Test1() throws IOException
 	{
 		log = extent.createTest("Verify Login Page");
-		Assert.assertEquals(new Operations(driver).getSize("xpath", "//button[@type='submit']"), 1,"Login page not opened");
+		Message.failedstatus="Login page not opened";
+		Assert.assertEquals(new Operations(driver).getSize("xpath", "//button[@type='submit']"), 1,Message.failedstatus);
 		//System.out.println("Open login page");
 		log.pass("Open login page");		
 	}
@@ -142,7 +144,7 @@ public class Login_Test {
 		if(testresult.getStatus()==ITestResult.FAILURE)
 		{
 			new Screenshot(driver,testresult.getName());
-			log.fail(new Login(driver,wait,extent,log).failedstatus+" @"+testresult.getName(), MediaEntityBuilder.createScreenCaptureFromPath(new ConfigFile().getInput("screenshot_directory")+testresult.getName()+".png").build());
+			log.fail(Message.failedstatus+" @"+testresult.getName(), MediaEntityBuilder.createScreenCaptureFromPath(new ConfigFile().getInput("screenshot_directory")+testresult.getName()+".png").build());
 		}
 		driver.quit();
 	}
