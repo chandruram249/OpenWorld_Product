@@ -31,29 +31,47 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">OpenWorld_Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi_attn">1</td><td class="numi">13.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">OpenWorld_Test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">TestReport.Login_Test</td><td><a href="#m1"><b>Test1</b>  </a></td><td class="numi">1</td><td>1532682761802</td><td class="numi">10046</td></tr>
-<tr><th colspan="4">OpenWorld_Test &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="2">TestReport.Login_Test</td><td><a href="#m2"><b>Test2</b>  </a></td><td class="numi">1</td><td>1532682772678</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m3"><b>Test3</b>  </a></td><td class="numi">1</td><td>1532682772692</td><td class="numi">2</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m1"><b>beforeTest</b>  </a></td><td class="numi">1</td><td>1532699119774</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m2"><b>beforeMethod</b>  </a></td><td class="numi">1</td><td>1532699119797</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m3"><b>Test1</b>  </a></td><td class="numi">1</td><td>1532699119799</td><td class="numi">6</td></tr>
 </table>
-<h1>OpenWorld_Test</h1>
-<h2 id="m1">TestReport.Login_Test:Test1</h2>
+<h1>Default test</h1>
+<h2 id="m1">TestReport.Forgot_Password_Test:beforeTest</h2>
 <div style="padding-left:3em">
-<p>Login page not opened expected [1] but found [0]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:370)
-<br/>at TestReport.Login_Test.Test1(Login_Test.java:124)
-<br/>25 lines not shown
+<p>
+Parameter &apos;reportname&apos; is required by @Configuration on method beforeTest but has not been marked @Optional or defined
+in /tmp/testng-eclipse--1861494227/testng-customsuite.xml</p>
+org.testng.internal.Parameters.createParameters(Parameters.java:155)
+<br/>at org.testng.internal.Parameters.createParameters(Parameters.java:355)
+<br/>at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+<br/>at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+<br/>at org.testng.TestRunner.run(TestRunner.java:609)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+<br/>at org.testng.TestNG.run(TestNG.java:1031)
+<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<br/>1 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">TestReport.Login_Test:Test2</h2>
+<h2 id="m2">TestReport.Forgot_Password_Test:beforeMethod</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">TestReport.Login_Test:Test3</h2>
+<h2 id="m3">TestReport.Forgot_Password_Test:Test1</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
