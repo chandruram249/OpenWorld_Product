@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,21 +22,21 @@ public class Fluentwait {
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("demoemp");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Pass@123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		fw("//span[text()='Report Supervisionm']");
+		fw("//span[text()='Report Supervision']");
 		driver.findElement(By.xpath(xpath)).click();
 	}
+	@SuppressWarnings("deprecation")
 	public static void fw(String xpaths)
 	{
 		xpath=xpaths;
-		 FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-			        .withTimeout(10, TimeUnit.SECONDS)
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			        .withTimeout(20, TimeUnit.SECONDS)
 			        .pollingEvery(5, TimeUnit.SECONDS)
-			        .ignoring(NoSuchElementException.class);
+			        .ignoring(NoSuchElementException.class,StaleElementReferenceException.class);
 		     wait.until(new Function<WebDriver, WebElement>() {
 			 public WebElement apply(WebDriver driver) {
-			 WebElement element = driver.findElement(By.xpath(xpath));
-			 return element;
-			 }
+				 return driver.findElement(By.xpath(xpath));
+			  }
 			 });
 		//driver.findElement(By.xpath("//span[text()='Report Supervision']")).click();
 	}
