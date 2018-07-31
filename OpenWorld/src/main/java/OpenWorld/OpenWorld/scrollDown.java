@@ -14,8 +14,8 @@ public class scrollDown {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement e = driver.findElement(By.xpath("//input[@type='search']"));
 		// js.executeScript("window.scrollBy(0,1000)");
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		// js.executeScript("arguments[0].scrollIntoView();", e);
+		//js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		js.executeScript("arguments[0].scrollIntoView();", e);
 	}
 
 }
