@@ -22,7 +22,8 @@ public class Tablelink {
 		driver.manage().window().maximize();
 		driver.get("http://192.168.2.17:5000");
 		//linkTable();
-		uploadDoc();
+		//uploadDoc();
+		sample();
 		/*JavascriptExecutor js=(JavascriptExecutor)driver; 
 		js.executeScript("document.getElementByXPath(\"//input[@type='text']\").value=lalith");
 		js.executeScript("document.getElementByXPath(\"//input[@type='password']\").value=Pass@123");*/
@@ -86,5 +87,15 @@ public class Tablelink {
         	exp.printStackTrace();
         }
     }
+	public static void sample() throws InterruptedException {
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("demoemp");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Pass@123");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		driver.findElement(By.xpath("//span[text()='Verification']")).click();
+		driver.findElement(By.xpath("//tr[@class='even']/td[1]")).click();
+		Thread.sleep(2000);
+		String gettext=driver.findElement(By.xpath("//section[@class='content-header']/h1")).getText();
+		System.out.println(gettext);
+	}
 
 }

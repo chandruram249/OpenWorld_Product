@@ -53,14 +53,14 @@ public class Login_Test {
 	 * }
 	 */
 	@BeforeMethod
-	@Parameters("browser")
-	public void beforeMethod(String browser) throws IOException {
+	@Parameters({"browser","headless"})
+	public void beforeMethod(String browser, Boolean headless) throws IOException {
 		switch (browser.toLowerCase()) {
 		case "chrome": {
 			try {
 				System.setProperty("webdriver.chrome.driver", ConfigFile.getInput("chromepath"));
 				ChromeOptions options = new ChromeOptions();
-				options.setHeadless(false);
+				options.setHeadless(headless);
 				driver = new ChromeDriver(options);
 
 			} catch (Exception e) {
@@ -148,14 +148,14 @@ public class Login_Test {
 				ConfigFile.getInput("empty_text"), ConfigFile.getInput("alertcontent3"));
 	}
 
-	@Test(testName = "Verify without username and with password", dependsOnMethods = "Test1", priority = 7)
+	@Test(testName = "Verify without username and with password", dependsOnMethods = "Test1")
 	public void Test7() throws IOException {
 		log = extent.createTest("Verify without username and with password");
 		new Login(driver, wait, extent, log).invalidLogin(ConfigFile.getInput("empty_text"),
 				ConfigFile.getInput("sp_password"), ConfigFile.getInput("alertcontent4"));
 	}
 
-	@Test(testName = "Verify with username and without password", dependsOnMethods = "Test1", priority = 8)
+	@Test(testName = "Verify with username and without password", dependsOnMethods = "Test1", priority = 7)
 	public void Test8() throws IOException {
 		log = extent.createTest("Verify with username and without password");
 		new Login(driver, wait, extent, log).invalidLogin(ConfigFile.getInput("sp_username"),

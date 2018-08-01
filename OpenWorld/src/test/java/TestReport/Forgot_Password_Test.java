@@ -28,14 +28,14 @@ public class Forgot_Password_Test {
 	public ExtentTest log;
 	WebDriverWait wait;
 	@BeforeMethod
-	@Parameters("browser")
-	public void beforeMethod(String browser) throws IOException {
+	@Parameters({"browser","headless"})
+	public void beforeMethod(String browser, Boolean headless) throws IOException {
 		switch (browser.toLowerCase()) {
 		case "chrome": {
 			try {
 				System.setProperty("webdriver.chrome.driver", ConfigFile.getInput("chromepath"));
 				ChromeOptions options = new ChromeOptions();
-				options.setHeadless(false);
+				options.setHeadless(headless);
 				driver = new ChromeDriver(options);
 
 			} catch (Exception e) {

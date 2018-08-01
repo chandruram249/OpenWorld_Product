@@ -31,47 +31,85 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Login_Test</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">40.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Forgotpassword_Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">59.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">7</td><td class="numi">7</td><td class="numi_attn">1</td><td class="numi_attn">1</td><td class="numi">99.4 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m1"><b>beforeTest</b>  </a></td><td class="numi">1</td><td>1532699119774</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m2"><b>beforeMethod</b>  </a></td><td class="numi">1</td><td>1532699119797</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Default test &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m3"><b>Test1</b>  </a></td><td class="numi">1</td><td>1532699119799</td><td class="numi">6</td></tr>
+<tr><th colspan="4">Login_Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">TestReport.Login_Test</td><td><a href="#m1"><b>Test2</b>  </a></td><td class="numi">1</td><td>1533124993332</td><td class="numi">380</td></tr>
+<tr><th colspan="4">Login_Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="7">TestReport.Login_Test</td><td><a href="#m2"><b>Test1</b>  </a></td><td class="numi">1</td><td>1533124987432</td><td class="numi">511</td></tr><tr class="passedodd"><td><a href="#m3"><b>Test7</b>  </a></td><td class="numi">1</td><td>1533124990977</td><td class="numi">804</td></tr><tr class="passedodd"><td><a href="#m4"><b>Test3</b>  </a></td><td class="numi">1</td><td>1533124999527</td><td class="numi">957</td></tr><tr class="passedodd"><td><a href="#m5"><b>Test4</b>  </a></td><td class="numi">1</td><td>1533125002491</td><td class="numi">923</td></tr><tr class="passedodd"><td><a href="#m6"><b>Test5</b>  </a></td><td class="numi">1</td><td>1533125005388</td><td class="numi">924</td></tr><tr class="passedodd"><td><a href="#m7"><b>Test6</b>  </a></td><td class="numi">1</td><td>1533125007683</td><td class="numi">736</td></tr><tr class="passedodd"><td><a href="#m8"><b>Test8</b>  </a></td><td class="numi">1</td><td>1533125009975</td><td class="numi">812</td></tr>
+<tr><th colspan="4">Forgotpassword_Test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m9"><b>beforeMethod</b>  </a></td><td class="numi">1</td><td>1533125012523</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Forgotpassword_Test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">TestReport.Forgot_Password_Test</td><td><a href="#m10"><b>Test1</b>  </a></td><td class="numi">1</td><td>1533125071584</td><td class="numi">1</td></tr>
 </table>
-<h1>Default test</h1>
-<h2 id="m1">TestReport.Forgot_Password_Test:beforeTest</h2>
+<h1>Login_Test</h1>
+<h2 id="m1">TestReport.Login_Test:Test2</h2>
 <div style="padding-left:3em">
-<p>
-Parameter &apos;reportname&apos; is required by @Configuration on method beforeTest but has not been marked @Optional or defined
-in /tmp/testng-eclipse--1861494227/testng-customsuite.xml</p>
-org.testng.internal.Parameters.createParameters(Parameters.java:155)
-<br/>at org.testng.internal.Parameters.createParameters(Parameters.java:355)
-<br/>at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
-<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
-<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-<br/>at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-<br/>at org.testng.TestRunner.run(TestRunner.java:609)
-<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-<br/>at org.testng.TestNG.run(TestNG.java:1031)
-<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-<br/>1 lines not shown
+<p>Not a Home Page expected [http://192.168.2.17:5000/#/] but found [http://192.168.2.17:5000/]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at Flow.Login.validLogin(Login.java:42)
+<br/>at TestReport.Login_Test.Test2(Login_Test.java:118)
+<br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">TestReport.Forgot_Password_Test:beforeMethod</h2>
+<h2 id="m2">TestReport.Login_Test:Test5</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">TestReport.Forgot_Password_Test:Test1</h2>
+<h2 id="m3">TestReport.Login_Test:Test1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">TestReport.Login_Test:Test7</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">TestReport.Login_Test:Test4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">TestReport.Login_Test:Test6</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">TestReport.Login_Test:Test3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">TestReport.Login_Test:Test8</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Forgotpassword_Test</h1>
+<h2 id="m9">TestReport.Forgot_Password_Test:beforeMethod</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>chrome</td>
+<td>false</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>unknown error: failed to change window state to maximized, current state is normal
+  (Session info: chrome=67.0.3396.62)
+  (Driver info: chromedriver=2.40.565383 (76257d1ab79276b2d53ee976b2c3e3b9f335cde7),platform=Linux 4.4.0-116-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;kadamba-desktop&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-116-generic&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565383 (76257d1ab79276..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.62, webStorageEnabled: true}
+Session ID: 9f05d74e4de7b1fdbdce249a389f6b01</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:828)
+<br/>at TestReport.Forgot_Password_Test.beforeMethod(Forgot_Password_Test.java:56)
+<br/>27 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">TestReport.Forgot_Password_Test:Test1</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

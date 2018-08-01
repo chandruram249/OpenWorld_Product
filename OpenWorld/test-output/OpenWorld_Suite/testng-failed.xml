@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [OpenWorld_Suite]">
-  <parameter name="reportname" value="TestReport"/>
+  <parameter name="headless" value="false"/>
+  <parameter name="reportname" value="Forgotpassword_TestReport"/>
   <parameter name="browser" value="chrome"/>
-  <parameter name="scriptname" value="LoginPage"/>
-  <test name="OpenWorld_Test(failed)">
-    <parameter name="reportname" value="TestReport"/>
+  <test name="Login_Test(failed)">
+    <parameter name="headless" value="true"/>
+    <parameter name="reportname" value="Login_TestReport"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="scriptname" value="LoginPage"/>
     <classes>
+      <class name="TestReport.Forgot_Password_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TestReport.Forgot_Password_Test -->
       <class name="TestReport.Login_Test">
         <methods>
           <include name="beforeMethod"/>
           <include name="Test1"/>
           <include name="afterTest"/>
-          <include name="Test7"/>
-          <include name="Test8"/>
-          <include name="Test6"/>
+          <include name="Test2"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- TestReport.Login_Test -->
     </classes>
-  </test> <!-- OpenWorld_Test(failed) -->
+  </test> <!-- Login_Test(failed) -->
+  <test name="Forgotpassword_Test(failed)">
+    <parameter name="headless" value="false"/>
+    <parameter name="reportname" value="Forgotpassword_TestReport"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestReport.Forgot_Password_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="Test1"/>
+        </methods>
+      </class> <!-- TestReport.Forgot_Password_Test -->
+      <class name="TestReport.Login_Test">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- TestReport.Login_Test -->
+    </classes>
+  </test> <!-- Forgotpassword_Test(failed) -->
 </suite> <!-- Failed suite [OpenWorld_Suite] -->

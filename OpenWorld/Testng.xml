@@ -2,6 +2,7 @@
 <suite name="OpenWorld_Suite">
 <test name="Login_Test">
 <parameter name="browser" value="chrome"/>
+<parameter name="headless" value="true"/>
 <parameter name="reportname" value="Login_TestReport"/>
 <classes>
 <class name="TestReport.Login_Test"/>
@@ -9,6 +10,7 @@
 </test>
 <test name="Forgotpassword_Test">
 <parameter name="browser" value="chrome"/>
+<parameter name="headless" value="false"/>
 <parameter name="reportname" value="Forgotpassword_TestReport"/>
 <classes>
 <class name="TestReport.Forgot_Password_Test"/>
